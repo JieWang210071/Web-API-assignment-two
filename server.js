@@ -45,6 +45,7 @@ app.post('/posts', function(req, res) {
         });
     } else {
         const payload = _.assign({}, req.query, req.headers);
+        payload.UNIQUE_KEY = UNIQUE_KEY;
         res.json(payload);
     }
 });
@@ -57,6 +58,7 @@ app.put('/puts', function(req, res) {
         });
     } else {
         const payload = _.assign({}, req.query, req.headers);
+        payload.UNIQUE_KEY = UNIQUE_KEY;
         res.json(payload);
     }
 });
@@ -69,6 +71,7 @@ app.delete('/deletes', passport.authenticate('basic', { session: false }), funct
         });
     } else {
         const payload = _.assign({}, req.query, req.headers);
+        payload.UNIQUE_KEY = UNIQUE_KEY;
         res.json(payload);
     }
 });
