@@ -1,0 +1,322 @@
+{
+	"info": {
+		"name": "hw3",
+		"_postman_id": "adb734b5-9710-409b-8029-88b1c2d8e4d3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "local_get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MTIzMTozMjE="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://cryptic-island-85919.herokuapp.com/gets?id=123",
+					"protocol": "https",
+					"host": [
+						"cryptic-island-85919",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gets"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"equals": true
+						},
+						{
+							"key": "name",
+							"value": "jie",
+							"equals": true,
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local_get_fail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://cryptic-island-85919.herokuapp.com/gets?id=123&name=jie",
+					"protocol": "https",
+					"host": [
+						"cryptic-island-85919",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"gets"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"equals": true
+						},
+						{
+							"key": "name",
+							"value": "jie",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Jie wang",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cryptic-island-85919.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"cryptic-island-85919",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local_put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://cryptic-island-85919.herokuapp.com/puts?id=123&name=jie",
+					"protocol": "https",
+					"host": [
+						"cryptic-island-85919",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"puts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"equals": true
+						},
+						{
+							"key": "name",
+							"value": "jie",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local_delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "321",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic MTIzOjMyMQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://cryptic-island-85919.herokuapp.com/deletes?id=123&name=jie",
+					"protocol": "https",
+					"host": [
+						"cryptic-island-85919",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"deletes"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"equals": true
+						},
+						{
+							"key": "name",
+							"value": "jie",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local_delete_auth_fail",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "321",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "321",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic MzIxOjMyMQ=="
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://cryptic-island-85919.herokuapp.com/deletes?id=123&name=jie",
+					"protocol": "https",
+					"host": [
+						"cryptic-island-85919",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"deletes"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"equals": true
+						},
+						{
+							"key": "name",
+							"value": "jie",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local_reject_method",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://cryptic-island-85919.herokuapp.com/?id=123&name=jie",
+					"protocol": "https",
+					"host": [
+						"cryptic-island-85919",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"equals": true
+						},
+						{
+							"key": "name",
+							"value": "jie",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
